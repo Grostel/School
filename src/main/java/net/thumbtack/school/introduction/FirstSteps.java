@@ -146,9 +146,10 @@ public class FirstSteps {
     // Для пустого двумерного массива возвращает Integer.MIN_VALUE.
     public int max(int[][] matrix) {
         int result = Integer.MIN_VALUE;
-        for (int el[]: matrix) {
-            int temp = max(el);
-            result = Math.max(temp, result);
+        for (int[] elem : matrix) {
+            //int temp = max(elem);
+            //result = Math.max(temp, result);
+            result = Math.max(max(elem), result);
         }
         return result;
     }
@@ -169,8 +170,8 @@ public class FirstSteps {
     // Пустая строка считается упорядоченной. Разные строки массива matrix могут иметь разное количество элементов.
     // При написании метода рекомендуется внутри него вызвать метод из п. 13.
     public boolean isSortedDescendant(int[][] matrix) {
-        for (int el[]: matrix) {
-            if (!isSortedDescendant(el)){
+        for (int[] elem : matrix) {
+            if (!isSortedDescendant(elem)){
                 return false;
             }
         }
