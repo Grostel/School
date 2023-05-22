@@ -122,39 +122,39 @@ public class TestRectangle3D {
         );
     }
 
-//    @Test
-//    public void testIsIntersectsRectangle3D() {
-//        Rectangle3D rect3D = new Rectangle3D(10, 20, 30, 40, 10);
-//        assertAll(
-//                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(15, 25, 25, 35, 5))),
-//                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(-10, 20, 30, 40, 3))),
-//                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(10, 20, 50, 40, 10))),
-//                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(-10, 20, 50, 40, 100))),
-//                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(10, -20, 30, 40, 20))),
-//                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(10, 20, 30, 60, 15))),
-//                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(-10, -20, 50, 60, 10))),
-//                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(0, 10, 20, 30, 10))),
-//                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(20, 30, 40, 50, 15))),
-//                () -> assertFalse(rect3D.isIntersects(new Rectangle3D(-40, 20, -30, 40, 15))),
-//                () -> assertFalse(rect3D.isIntersects(new Rectangle3D(110, 120, 130, 140, 25))),
-//                () -> assertFalse(rect3D.isIntersects(new Rectangle3D(10, 120, 30, 140, 50))),
-//                () -> assertFalse(rect3D.isIntersects(new Rectangle3D(10, -40, 30, -20, 80)))
-//        );
-//    }
-//
-//    @Test
-//    public void testIsRectangleInsideRectangle3D() {
-//        Rectangle3D rect3D = new Rectangle3D(10, 20, 30, 40, 10);
-//        assertAll(
-//                () -> assertTrue(rect3D.isInside(new Rectangle3D(15, 25, 25, 35, 10))),
-//                () -> assertFalse(rect3D.isInside(new Rectangle3D(15, 25, 25, 35, 20))),
-//                () -> assertFalse(rect3D.isInside(new Rectangle3D(-40, 20, -30, 40, 20))),
-//                () -> assertFalse(rect3D.isInside(new Rectangle3D(110, 120, 130, 140, 10))),
-//                () -> assertFalse(rect3D.isInside(new Rectangle3D(10, 120, 30, 140, 60))),
-//                () -> assertFalse(rect3D.isInside(new Rectangle3D(10, -40, 30, -20, 40)))
-//        );
-//    }
-//
+    @Test
+    public void testIsIntersectsRectangle3D() {
+        Rectangle3D rect3D = new Rectangle3D(10, 20, 30, 40, 10);
+        assertAll(
+                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(15, 25, 25, 35, 5))),
+                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(-10, 20, 30, 40, 3))),
+                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(10, 20, 50, 40, 10))),
+                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(-10, 20, 50, 40, 100))),
+                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(10, -20, 30, 40, 20))),
+                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(10, 20, 30, 60, 15))),
+                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(-10, -20, 50, 60, 10))),
+                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(0, 10, 20, 30, 10))),
+                () -> assertTrue(rect3D.isIntersects(new Rectangle3D(20, 30, 40, 50, 15))),
+                () -> assertFalse(rect3D.isIntersects(new Rectangle3D(-40, 20, -30, 40, 15))),
+                () -> assertFalse(rect3D.isIntersects(new Rectangle3D(110, 120, 130, 140, 25))),
+                () -> assertFalse(rect3D.isIntersects(new Rectangle3D(10, 120, 30, 140, 50))),
+                () -> assertFalse(rect3D.isIntersects(new Rectangle3D(10, -40, 30, -20, 80)))
+        );
+    }
+
+    @Test
+    public void testIsRectangleInsideRectangle3D() {
+        Rectangle3D rect3D = new Rectangle3D(10, 20, 30, 40, 10);
+        assertAll(
+                () -> assertTrue(rect3D.isInside(new Rectangle3D(15, 25, 25, 35, 10))),
+                () -> assertFalse(rect3D.isInside(new Rectangle3D(15, 25, 25, 35, 20))),
+                () -> assertFalse(rect3D.isInside(new Rectangle3D(-40, 20, -30, 40, 20))),
+                () -> assertFalse(rect3D.isInside(new Rectangle3D(110, 120, 130, 140, 10))),
+                () -> assertFalse(rect3D.isInside(new Rectangle3D(10, 120, 30, 140, 60))),
+                () -> assertFalse(rect3D.isInside(new Rectangle3D(10, -40, 30, -20, 40)))
+        );
+    }
+
 //    @Test
 //    public void testEqualsRectangle3D() {
 //        Rectangle3D rect3D1 = new Rectangle3D(10, 20, 30, 40, 10);

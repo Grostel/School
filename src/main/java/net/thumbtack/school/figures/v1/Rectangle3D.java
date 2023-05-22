@@ -130,19 +130,35 @@ public class Rectangle3D extends Rectangle{
         return isInside(point.getX(), point.getY(), point.getZ());
     }
 
-//    //22. Определяет, пересекается  ли Rectangle3D с другим Rectangle3D. Считается, что параллелепипеды пересекаются, если у них есть хоть одна общая точка.
-//    public boolean isIntersects(Rectangle3D rectangle){
-//
-//    }
-//
-//    //23. Определяет, лежит ли rectangle3D целиком внутри текущего Rectangle3D.
-//    public boolean isInside(Rectangle3D rectangle){
-//
-//    }
+    //22. Определяет, пересекается  ли Rectangle3D с другим Rectangle3D. Считается, что параллелепипеды пересекаются, если у них есть хоть одна общая точка.
+    public boolean isIntersects(Rectangle3D rectangle){
+        return super.isIntersects(rectangle);
+    }
+
+    //23. Определяет, лежит ли rectangle3D целиком внутри текущего Rectangle3D.
+    public boolean isInside(Rectangle3D rectangle){
+        return super.isInside(rectangle) && height >= rectangle.getHeight();
+    }
 
 
     //24.	методы equals и hashCode. Не пишите эти методы сами, используйте средства IDEA.
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
 
+        Rectangle3D that = (Rectangle3D) o;
+
+        return height == that.height;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + height;
+        return result;
+    }
 }
